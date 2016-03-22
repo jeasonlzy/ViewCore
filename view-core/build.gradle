@@ -21,6 +21,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
 }
 
 
@@ -33,8 +40,8 @@ dependencies {
 }
 
 
-def siteUrl = 'https://github.com/jeasonlzy0216'                   // #CONFIG# // project homepage
-def gitUrl = 'https://github.com/jeasonlzy0216'                    // #CONFIG# // project git
+def siteUrl = 'https://github.com/jeasonlzy0216/ViewCore'          // #CONFIG# // project homepage
+def gitUrl = 'https://github.com/jeasonlzy0216/ViewCore.git'       // #CONFIG# // project git
 group = "com.lzy.widget"                                           // #CONFIG# // Maven Group ID for the artifact (pageckage name is ok)
 
 install {
@@ -54,7 +61,7 @@ install {
                 developers {
                     developer {
                         id 'jeasonlzy'                           // #CONFIG# // your user id (you can write your nickname)
-                        name '廖子尧'                            // #CONFIG# // your user name
+                        name 'LiaoZiYao'                         // #CONFIG# // your user name
                         email 'liaojeason@126.com'               // #CONFIG# // your email
                     }
                 }
@@ -83,6 +90,17 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version true
+        links "http://docs.oracle.com/javase/7/docs/api"
+        title 'Common Views For Android'
+    }
+}
+
 artifacts {
     archives javadocJar
     archives sourcesJar
@@ -91,15 +109,22 @@ artifacts {
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+//    user = properties.getProperty("bintray.user")
+//    key = properties.getProperty("bintray.apikey")
+    user = 'jeasonlzy'
+    key = '9a74ceeb226b4ca12e12aa5eecc1da8ef89c063b'
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "lesscode"                                                 // #CONFIG# project name in jcenter
+        name = "view-core"                                                 // #CONFIG# project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }
 }
+
+//gradew javadocJar
+//gradew sourcesJar
+//gradew install
+//gradew bintrayUpload
