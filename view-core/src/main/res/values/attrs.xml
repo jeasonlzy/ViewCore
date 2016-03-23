@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--透明渐变的TabView-->
+    <declare-styleable name="AlphaView">
+        <attr name="av_tabIconNormal" format="reference"/>
+        <attr name="av_tabIconSelected" format="reference"/>
+        <attr name="av_tabText" format="string"/>
+        <attr name="av_tabTextSize" format="dimension"/>
+        <attr name="av_textColorNormal" format="color"/>
+        <attr name="av_textColorSelected" format="color"/>
+    </declare-styleable>
+
+    <!--圆形指示器-->
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_normalRadius" format="dimension"/>
+        <attr name="ci_normalRadiusColor" format="color"/>
+        <attr name="ci_selectedRadius" format="dimension"/>
+        <attr name="ci_selectedRadiusColor" format="color"/>
+        <attr name="ci_dotPadding" format="dimension"/>
+        <attr name="ci_isStroke" format="boolean"/>
+        <attr name="ci_normalStrokeWidth" format="dimension"/>
+        <attr name="ci_isBlink" format="boolean"/>
+    </declare-styleable>
+
+    <!--Tab指示器-->
+    <declare-styleable name="TabTitleIndicator">
+        <attr name="tti_indicatorHeight" format="dimension"/>
+        <attr name="tti_indicatorColor" format="color"/>
+        <attr name="tti_underlineHeight" format="dimension"/>
+        <attr name="tti_underlineColor" format="color"/>
+        <attr name="tti_dividerWidth" format="dimension"/>
+        <attr name="tti_dividerPaddingTopBottom" format="dimension"/>
+        <attr name="tti_dividerColor" format="color"/>
+        <attr name="tti_triangleHeight" format="dimension"/>
+        <attr name="tti_tabPaddingLeftRight" format="dimension"/>
+        <attr name="tti_tabTextSizeNormal" format="dimension"/>
+        <attr name="tti_tabTextSizeSelected" format="dimension"/>
+        <attr name="tti_tabTextColorNormal" format="color"/>
+        <attr name="tti_tabTextColorSelected" format="color"/>
+        <attr name="tti_tabBackground" format="reference"/>
+        <attr name="tti_visibleCount" format="integer"/>
+        <attr name="tti_scrollOffset" format="dimension"/>
+    </declare-styleable>
+
+    <!--带圆角的正六边形-->
+    <declare-styleable name="HexagonView">
+        <attr name="hexagonText" format="string"/>
+        <attr name="hexagonTextSize" format="dimension"/>
+        <attr name="hexagonTextColor" format="color"/>
+        <attr name="hexagonBorderWidth" format="dimension"/>
+        <attr name="hexagonBorderColor" format="color"/>
+        <attr name="hexagonFillColor" format="color"/>
+        <attr name="hexagonCorner" format="dimension"/>
+        <attr name="hexagonBreakLineCount" format="integer"/>
+        <attr name="hexagonMaxLine" format="integer"/>
+        <attr name="hexagonTextSpacing" format="dimension"/>
+        <attr name="hexagonBorderOverlay" format="boolean"/>
+        <attr name="hexagonOrientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!--圆形图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_BorderWidth" format="dimension"/>
+        <attr name="civ_BorderColor" format="color"/>
+        <attr name="civ_FillColor" format="color"/>
+        <attr name="civ_BorderOverlay" format="boolean"/>
+    </declare-styleable>
+
+    <!--下拉头部放大的View-->
+    <declare-styleable name="PullZoomView">
+        <attr name="pzv_sensitive" format="float" />
+        <attr name="pzv_isZoomEnable" format="boolean" />
+        <attr name="pzv_isParallax" format="boolean" />
+        <attr name="pzv_zoomTime" format="integer" />
+    </declare-styleable>
+
+    <!--循环滑动的ViewPager-->
+    <declare-styleable name="LoopViewPager">
+        <attr name="lvp_isAutoLoop" format="boolean"/>
+        <attr name="lvp_delayTime" format="integer"/>
+    </declare-styleable>
+</resources>
