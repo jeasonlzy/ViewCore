@@ -1,19 +1,18 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "0.1.1"
+version = "0.1.3"              // 数据仓库依赖第三部分
 
-def siteUrl = 'https://github.com/jeasonlzy0216/ViewCore'          // #CONFIG# // project homepage
-def gitUrl = 'https://github.com/jeasonlzy0216/ViewCore.git'       // #CONFIG# // project git
-group = "com.lzy.widget"                                           // #CONFIG# // Maven Group ID for the artifact (pageckage name is ok)
+def siteUrl = 'https://github.com/jeasonlzy0216/ViewCore'
+def gitUrl = 'https://github.com/jeasonlzy0216/ViewCore.git'
+group = "com.lzy.widget"       // 数据仓库依赖第一部分
 
 install {
     repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
         pom {
             project {
                 packaging 'aar'
-                name 'Common Views For Android'                   // #CONFIG# // project title
+                name 'Common Views For Android'     // 项目描述
                 url siteUrl
                 licenses {
                     license {
@@ -23,10 +22,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'jeasonlzy'
-                        // #CONFIG# // your user id (you can write your nickname)
-                        name 'LiaoZiYao'                         // #CONFIG# // your user name
-                        email 'liaojeason@126.com'               // #CONFIG# // your email
+                        id 'jeasonlzy'                // 开发者信息
+                        name 'LiaoZiYao'              // 开发者信息
+                        email 'liaojeason@126.com'    // 开发者信息
                     }
                 }
                 scm {
@@ -61,7 +59,7 @@ javadoc {
         author true
         version true
         links "http://docs.oracle.com/javase/7/docs/api"
-        title 'Common Views For Android'
+        title 'Common Views For Android'   // 文档标题
     }
 }
 
@@ -78,18 +76,10 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "view-core"                                                 // #CONFIG# project name in jcenter
+        name = "view-core"             // 数据仓库依赖第二部分
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }
 }
-
-//task hello {
-//    doLast {
-//        println 'Hello, Gradle!'
-//        println properties.getProperty("bintray.user")
-//        println properties.getProperty("bintray.apikey")
-//    }
-//}

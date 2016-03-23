@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:centerColor="#ff5a5d5a"
+                android:centerY="0.75"
+                android:endColor="#ff747674"
+                android:startColor="#ff9d9e9d"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#a046801b"
+                    android:centerY="0.75"
+                    android:endColor="#a046c01b"
+                    android:startColor="#a046c01b"/>
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#46bb1b"
+                    android:centerY="0.75"
+                    android:endColor="#46cc1b"
+                    android:startColor="#46cc1b"/>
+            </shape>
+        </clip>
+    </item>
+
+
+    <!--
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:centerColor="#234"
+                    android:endColor="#a24"
+                    android:startColor="#234"/>
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <shape>
+            <gradient
+                android:centerColor="#ffa600"
+                android:endColor="#ff5500"
+                android:startColor="#ff0000"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/background">
+        <clip>
+            <shape>
+                <gradient
+                    android:centerColor="#40000000"
+                    android:endColor="#44000000"
+                    android:startColor="#33000001"/>
+            </shape>
+        </clip>
+    </item>-->
+</layer-list>
