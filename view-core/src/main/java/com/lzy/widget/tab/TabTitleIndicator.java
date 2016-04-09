@@ -62,7 +62,7 @@ public class TabTitleIndicator extends HorizontalScrollView {
     private int tabTextSizeSelected = 18;    //文字选中大小
     private int tabTextColorNormal = 0xFF666666;   //文字默认颜色
     private int tabTextColorSelected = 0xFF0084FF;   //文字选中的颜色
-    private int tabBackgroundResId = R.drawable.tab_title_selector;//title按下的selector
+    private int tabBackgroundResId = R.drawable.tab_background_selector;//title按下的selector
     private int scrollOffset = 100;       //指示线距离左边的偏移量，当visibleCount=0时才有效
     private int visibleCount = 4;       //当前可见的数量 0表示不扩展，从左往右依次排序
 
