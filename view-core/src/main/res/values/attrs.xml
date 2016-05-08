@@ -83,6 +83,11 @@
         <attr name="civ_BorderOverlay" format="boolean"/>
     </declare-styleable>
 
+    <!--HeaderViewPager-->
+    <declare-styleable name="HeaderViewPager">
+        <attr name="hvp_topOffset" format="dimension"/>
+    </declare-styleable>
+
     <!--下拉头部放大的View-->
     <declare-styleable name="PullZoomView">
         <attr name="pzv_sensitive" format="float" />
@@ -95,5 +100,18 @@
     <declare-styleable name="LoopViewPager">
         <attr name="lvp_isAutoLoop" format="boolean"/>
         <attr name="lvp_delayTime" format="integer"/>
+    </declare-styleable>
+
+    <!--四种状态的View-->
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference"/>
+        <attr name="msv_emptyView" format="reference"/>
+        <attr name="msv_errorView" format="reference"/>
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0"/>
+            <enum name="error" value="1"/>
+            <enum name="empty" value="2"/>
+            <enum name="loading" value="3"/>
+        </attr>
     </declare-styleable>
 </resources>
