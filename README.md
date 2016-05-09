@@ -10,7 +10,7 @@
 
 ##用法
 ```java
-    compile 'com.lzy.widget:view-core:0.2.0'
+    compile 'com.lzy.widget:view-core:0.2.1'
 ```
 ##注意
 该库需要项目的编译版本为 23，使用时请在 build.gradle 文件中，将其改为23
